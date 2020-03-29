@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<title>edit customer</title>
+<head>
+	
+</head>
+<body>
+	<h1>EDIT CUSTOMER DETAILS</h1>
+	<% var editcustomer=editcustomer[0].toJSON(); %>
+	<form  method="POST" action="/saveedited/<%= editcustomer._id%>"  >
+		
+		
+		email:<input type="text" name="email" value="<%= editcustomer.email%>" id="email"/><br>
+		num:<input type="text" name="number" value="<%= editcustomer.number%>" /><br>
+		cur:<input type="text" name="currency" value="<%= editcustomer.currency%>" /><br>
+		Price:<input type="text" name="total_price" value="<%= editcustomer.total_price%>" /><br>
+
+
+		<input type="submit" value="SAVE"/>
+	</form>
+
+</body>
+</html>

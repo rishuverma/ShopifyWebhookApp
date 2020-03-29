@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<title>show customers</title>
+	<head></head>
+	<body>
+		<h1>show all details of cutomer</h1>
+		
+
+
+		<% for (var x of customerdb){x=x.toJSON(); %>		
+            <h4>email: <%=x.email%></h4>  
+            <h4>id: <%=x._id%></h4>    
+            <h4>currency: <%=x.currency%></h4>
+            <h4>num: <%=x.number%></h4>
+            <h4>price: <%=x.total_price%></h4>
+            <form action='/edit/<%=x._id%>' > 
+            <input type="submit" name="submitbutton" value="EDIT">
+        </form>
+        <br>
+        <br>    
+
+            
+              
+        <%}%>
+
+	</body>
+</html>
